@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#DFEDFB"
     android:padding="16dp">
 
     <LinearLayout
@@ -27,28 +28,26 @@
             android:layout_toEndOf="@id/ivBack"
             android:layout_marginStart="8dp"
             android:layout_alignParentTop="true"
+            android:textStyle="bold"
             android:layout_marginTop="8dp"/>
 
-        <TextView
-            android:id="@+id/tvPilihBioskop"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pilih Bioskop"
-            android:layout_below="@+id/tvPaymentMethod"
-            android:layout_marginTop="16dp"/>
+
 
         <Spinner
             android:id="@+id/spinnerBioskop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvPilihBioskop"
-            android:layout_marginTop="8dp"/>
+            android:background="@drawable/rounded_spinner"
+            android:padding="8dp"
+            android:layout_marginTop="12dp" />
 
         <TextView
             android:id="@+id/tvPilihJenisSeat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pilih Jenis Seat"
+            android:textStyle="bold"
             android:layout_below="@+id/spinnerBioskop"
             android:layout_marginTop="16dp"/>
 
@@ -57,13 +56,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvPilihJenisSeat"
-            android:layout_marginTop="8dp"/>
+            android:background="@drawable/rounded_spinner"
+            android:padding="8dp"
+            android:layout_marginTop="12dp"/>
 
         <TextView
             android:id="@+id/tvTanggal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tanggal"
+            android:text="Tanggal Menonton"
+            android:textStyle="bold"
             android:layout_below="@+id/spinnerJenisSeat"
             android:layout_marginTop="16dp"/>
 
@@ -72,14 +74,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvTanggal"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="8dp"
+            android:theme="@style/DatePickerStyle"
+            android:outlineSpotShadowColor="#0064D2"/>
+
 
         <TextView
             android:id="@+id/tvHarga"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Harga"
+            android:text="Harga Tiket"
+            android:textSize="20dp"
             android:layout_below="@+id/datePicker"
+            android:textStyle="bold"
             android:layout_marginTop="16dp"/>
 
         <TextView
@@ -87,6 +94,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Rp0"
+            android:textSize="16dp"
             android:layout_toEndOf="@+id/tvHarga"
             android:layout_below="@+id/datePicker"
             android:layout_marginStart="8dp"
@@ -97,7 +105,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Biaya Admin"
+            android:textSize="20dp"
             android:layout_below="@+id/tvHarga"
+            android:textStyle="bold"
             android:layout_marginTop="8dp"/>
 
         <TextView
@@ -105,6 +115,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Rp2000"
+            android:textSize="16dp"
             android:layout_toEndOf="@+id/tvBiayaAdmin"
             android:layout_below="@+id/tvHargaValue"
             android:layout_marginStart="8dp"
@@ -114,8 +125,10 @@
             android:id="@+id/tvTotal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Actual Pay"
+            android:text="Total Pembayaran"
+            android:textSize="20dp"
             android:layout_below="@+id/tvBiayaAdmin"
+            android:textStyle="bold"
             android:layout_marginTop="16dp"/>
 
         <TextView
@@ -123,6 +136,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Rp0"
+            android:textSize="16dp"
             android:layout_toEndOf="@+id/tvTotal"
             android:layout_below="@+id/tvBiayaAdminValue"
             android:layout_marginStart="8dp"
@@ -132,8 +146,10 @@
             android:id="@+id/tvAddPaymentMethod"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add Payment Method"
+            android:text="Tambahkan Metode Pembayaran"
             android:layout_below="@+id/tvTotal"
+            android:textSize="20dp"
+            android:textStyle="bold"
             android:layout_marginTop="16dp"/>
 
         <Spinner
@@ -141,14 +157,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvAddPaymentMethod"
-            android:layout_marginTop="8dp"/>
+            android:background="@drawable/rounded_spinner"
+            android:padding="8dp"
+            android:layout_marginTop="12dp"/>
 
         <Spinner
             android:id="@+id/spinnerBank"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/spinnerPaymentMethod"
+            android:background="@drawable/rounded_spinner"
             android:layout_marginTop="8dp"
+            android:padding="8dp"
             android:visibility="gone"/>
 
         <Spinner
@@ -156,7 +176,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/spinnerPaymentMethod"
-            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_spinner"
+            android:padding="8dp"
+            android:layout_marginTop="12dp"
             android:visibility="gone"/>
 
         <Button

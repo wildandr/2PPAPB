@@ -2,6 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#DFEDFB"
     android:padding="16dp">
 
     <ImageView
@@ -15,84 +17,112 @@
 
     <TextView
         android:id="@+id/tvTransaksiOrder"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Transaksi / Order"
+        android:text="Bukti Transaksi"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:layout_toEndOf="@id/ivBack"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="12dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="8dp"/>
 
-    <TextView
-        android:id="@+id/tvOrderNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Order Number: "
+    <ImageView
+        android:id="@+id/ivIlustrasi"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
         android:layout_below="@+id/tvTransaksiOrder"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:src="@drawable/tiket"
+        android:contentDescription="Ilustrasi"/>
 
-    <TextView
-        android:id="@+id/tvFilmName"
-        android:layout_width="wrap_content"
+    <!-- Gunakan CardView untuk membungkus elemen-elemen di bawah -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Film Name: "
-        android:layout_below="@+id/tvOrderNumber"
-        android:layout_marginTop="8dp"/>
+        android:layout_below="@+id/ivIlustrasi"
+        android:layout_marginTop="16dp"
+        android:layout_margin="12dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="24dp">
 
-    <TextView
-        android:id="@+id/tvSeat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Seat: "
-        android:layout_below="@+id/tvFilmName"
-        android:layout_marginTop="8dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="32dp">
 
-    <TextView
-        android:id="@+id/tvBioskopLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Lokasi Bioskop: "
-        android:layout_below="@+id/tvSeat"
-        android:layout_marginTop="8dp"/>
+            <TextView
+                android:id="@+id/tvOrderNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="Nomor Pemesanan: " />
 
-    <TextView
-        android:id="@+id/tvTanggalFilm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tanggal Film: "
-        android:layout_below="@+id/tvBioskopLocation"
-        android:layout_marginTop="8dp"/>
+            <TextView
+                android:id="@+id/tvFilmName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Film: "
+                android:textSize="18dp"
+                android:layout_marginTop="8dp"/>
 
-    <TextView
-        android:id="@+id/tvMetodePembayaran"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Metode Pembayaran: "
-        android:layout_below="@+id/tvTanggalFilm"
-        android:layout_marginTop="8dp"/>
+            <TextView
+                android:id="@+id/tvSeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jenis Kursi: "
+                android:textSize="18dp"
+                android:layout_marginTop="8dp"/>
 
-    <TextView
-        android:id="@+id/tvJumlahTiket"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Jumlah Tiket: "
-        android:layout_below="@+id/tvMetodePembayaran"
-        android:layout_marginTop="8dp"/>
+            <TextView
+                android:id="@+id/tvBioskopLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lokasi Bioskop: "
+                android:textSize="18dp"
+                android:layout_marginTop="8dp"/>
 
-    <TextView
-        android:id="@+id/tvBiayaAdmin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Biaya Admin: "
-        android:layout_below="@+id/tvJumlahTiket"
-        android:layout_marginTop="8dp"/>
+            <TextView
+                android:id="@+id/tvTanggalFilm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Film: "
+                android:textSize="18dp"
+                android:layout_marginTop="8dp"/>
 
-    <TextView
-        android:id="@+id/tvTotalHarga"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Total Harga: "
-        android:layout_below="@+id/tvBiayaAdmin"
-        android:layout_marginTop="8dp"/>
+            <TextView
+                android:id="@+id/tvMetodePembayaran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Metode Pembayaran: "
+                android:textSize="18dp"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/tvJumlahTiket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jumlah Tiket: "
+                android:textSize="18dp"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/tvBiayaAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Biaya Admin: "
+                android:textSize="18dp"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/tvTotalHarga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Harga: "
+                android:textSize="18dp"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
 </RelativeLayout>

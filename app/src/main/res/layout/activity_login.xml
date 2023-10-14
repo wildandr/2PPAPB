@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:padding="30dp"
+        android:padding="0dp"
         android:layout_margin="30dp"
         android:src="@drawable/ilustrasi1" />
 
@@ -20,6 +20,7 @@
         android:text="Selamat Datang di blobloticket"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textStyle="bold"
+        android:textSize="24dp"
         android:gravity="center"
         android:textColor="#0064D2" />
 
@@ -27,8 +28,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Login untuk melanjutkan"
+        android:textSize="16dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:gravity="center"
+        android:layout_marginBottom="20dp"
         android:textColor="#0064D2" />
 
     <EditText

@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#DFEDFB"
     android:padding="16dp">
 
@@ -11,11 +12,12 @@
         android:orientation="vertical">
 
         <TextView
+            android:layout_marginTop="50dp"
             android:id="@+id/tvWelcome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Hello, "
-            android:textSize="18sp"
+            android:textSize="24dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:gravity="left"
             android:textColor="#0064D2" />
@@ -28,7 +30,7 @@
             android:gravity="left"
             android:textStyle="bold"
             android:textColor="#0064D2"
-            android:textSize="24dp"
+            android:textSize="28dp"
             android:layout_marginTop="10dp" />
 
         <LinearLayout
@@ -51,6 +53,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
                     android:clickable="true"
+                    app:cardCornerRadius="15dp"
                     android:focusable="true">
 
                     <LinearLayout
@@ -60,9 +63,11 @@
                         android:padding="8dp">
 
                         <ImageView
+                            android:layout_marginTop="4dp"
                             android:layout_width="match_parent"
-                            android:layout_height="150dp"
+                            android:layout_height="200dp"
                             android:src="@drawable/spiderman"
+                            android:background="@drawable/rounded_corners"
                             android:contentDescription="Film 1"/>
 
                         <TextView
@@ -93,6 +98,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
                     android:clickable="true"
+                    app:cardCornerRadius="15dp"
                     android:focusable="true">
 
                     <LinearLayout
@@ -103,8 +109,9 @@
                         android:padding="8dp">
 
                         <ImageView
+                            android:layout_marginTop="4dp"
+                            android:layout_height="200dp"
                             android:layout_width="match_parent"
-                            android:layout_height="150dp"
                             android:src="@drawable/avenger"
                             android:contentDescription="Film 3"/>
 
@@ -136,6 +143,7 @@
                     android:layout_margin="8dp"
                     android:clickable="true"
                     android:id="@+id/cardAyatAyatCinta"
+                    app:cardCornerRadius="15dp"
                     android:focusable="true">
 
                     <LinearLayout
@@ -146,9 +154,9 @@
                         android:padding="8dp">
 
                         <ImageView
-
+                            android:layout_marginTop="4dp"
+                            android:layout_height="200dp"
                             android:layout_width="match_parent"
-                            android:layout_height="150dp"
                             android:src="@drawable/ayatayatcinta"
                             android:contentDescription="Film 5"/>
 
@@ -187,6 +195,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
+                    app:cardCornerRadius="15dp"
                     android:clickable="true"
                     android:focusable="true">
 
@@ -198,7 +207,8 @@
 
                         <ImageView
                             android:layout_width="match_parent"
-                            android:layout_height="150dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_height="200dp"
                             android:src="@drawable/hulk"
                             android:contentDescription="hulk"/>
 
@@ -230,6 +240,7 @@
                     android:layout_margin="8dp"
                     android:clickable="true"
                     android:id="@+id/cardSusterNgesot"
+                    app:cardCornerRadius="15dp"
                     android:focusable="true">
 
                     <LinearLayout
@@ -240,8 +251,9 @@
                         android:padding="8dp">
 
                         <ImageView
+                            android:layout_marginTop="4dp"
+                            android:layout_height="200dp"
                             android:layout_width="match_parent"
-                            android:layout_height="150dp"
                             android:src="@drawable/susterngesot"
                             android:contentDescription="Film 4"/>
 
@@ -273,6 +285,7 @@
                     android:layout_margin="8dp"
                     android:clickable="true"
                     android:id="@+id/cardRatatouille"
+                    app:cardCornerRadius="15dp"
                     android:focusable="true">
 
                     <LinearLayout
@@ -283,9 +296,9 @@
                         android:padding="8dp">
 
                         <ImageView
-
+                            android:layout_marginTop="4dp"
+                            android:layout_height="200dp"
                             android:layout_width="match_parent"
-                            android:layout_height="150dp"
                             android:src="@drawable/ratatouille"
                             android:contentDescription="Film 6"/>
 
