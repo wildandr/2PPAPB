@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/back"
+        android:contentDescription="Kembali"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tvTransaksiOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Transaksi / Order"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_toEndOf="@id/ivBack"
+        android:layout_marginStart="8dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tvOrderNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Number: "
+        android:layout_below="@+id/tvTransaksiOrder"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tvFilmName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Film Name: "
+        android:layout_below="@+id/tvOrderNumber"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tvSeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seat: "
+        android:layout_below="@+id/tvFilmName"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tvBioskopLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lokasi Bioskop: "
+        android:layout_below="@+id/tvSeat"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tvTanggalFilm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tanggal Film: "
+        android:layout_below="@+id/tvBioskopLocation"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tvMetodePembayaran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Metode Pembayaran: "
+        android:layout_below="@+id/tvTanggalFilm"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tvJumlahTiket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jumlah Tiket: "
+        android:layout_below="@+id/tvMetodePembayaran"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tvBiayaAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Biaya Admin: "
+        android:layout_below="@+id/tvJumlahTiket"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tvTotalHarga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Harga: "
+        android:layout_below="@+id/tvBiayaAdmin"
+        android:layout_marginTop="8dp"/>
+</RelativeLayout>

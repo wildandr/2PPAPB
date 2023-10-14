@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/back"
+            android:contentDescription="Kembali"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tvPaymentMethod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment Method"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_toEndOf="@id/ivBack"
+            android:layout_marginStart="8dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/tvPilihBioskop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilih Bioskop"
+            android:layout_below="@+id/tvPaymentMethod"
+            android:layout_marginTop="16dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerBioskop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPilihBioskop"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/tvPilihJenisSeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilih Jenis Seat"
+            android:layout_below="@+id/spinnerBioskop"
+            android:layout_marginTop="16dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerJenisSeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPilihJenisSeat"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/tvTanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanggal"
+            android:layout_below="@+id/spinnerJenisSeat"
+            android:layout_marginTop="16dp"/>
+
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTanggal"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/tvHarga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Harga"
+            android:layout_below="@+id/datePicker"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/tvHargaValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp0"
+            android:layout_toEndOf="@+id/tvHarga"
+            android:layout_below="@+id/datePicker"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/tvBiayaAdmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Biaya Admin"
+            android:layout_below="@+id/tvHarga"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/tvBiayaAdminValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp2000"
+            android:layout_toEndOf="@+id/tvBiayaAdmin"
+            android:layout_below="@+id/tvHargaValue"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/tvTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actual Pay"
+            android:layout_below="@+id/tvBiayaAdmin"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/tvTotalValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp0"
+            android:layout_toEndOf="@+id/tvTotal"
+            android:layout_below="@+id/tvBiayaAdminValue"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/tvAddPaymentMethod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Payment Method"
+            android:layout_below="@+id/tvTotal"
+            android:layout_marginTop="16dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerPaymentMethod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvAddPaymentMethod"
+            android:layout_marginTop="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerBank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinnerPaymentMethod"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"/>
+
+        <Spinner
+            android:id="@+id/spinnerDompetDigital"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinnerPaymentMethod"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnBayar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bayar"
+            android:layout_below="@+id/spinnerBank"
+            android:layout_marginTop="16dp"
+            android:layout_alignParentBottom="true"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/rounded_button"
+            android:layout_marginBottom="16dp"/>
+
+
+    </LinearLayout>
+</ScrollView>

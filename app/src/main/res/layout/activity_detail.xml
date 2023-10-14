@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/back"
+        android:contentDescription="Kembali"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tvDetailFilm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detail Film"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" />
+
+    <ImageView
+        android:id="@+id/ivFilm"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@id/tvDetailFilm"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/spiderman"
+        android:contentDescription="Gambar Film" />
+
+    <TextView
+        android:id="@+id/tvJudulFilm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivFilm"
+        android:layout_marginTop="8dp"
+        android:text="Spiderman"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:id="@+id/tvPembuatDanRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvJudulFilm"
+        android:layout_marginTop="4dp"
+        android:text="Pembuat Film | ⭐ 4.9"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+    <TextView
+        android:id="@+id/tvGenre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPembuatDanRating"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:padding="4dp"
+        android:background="@drawable/rounded_background"
+        android:textColor="#FFFFFF"
+        android:text="Genre" />
+
+    <TextView
+        android:id="@+id/tvStoryline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvGenre"
+        android:layout_marginTop="16dp"
+        android:text="Storyline"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:id="@+id/tvDeskripsi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvStoryline"
+        android:layout_marginTop="8dp"
+        android:text="Paragraf Singkat"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+    <Button
+        android:id="@+id/btnBeliTiket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDeskripsi"
+        android:background="@drawable/rounded_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:textColor="#FFFFFF"
+        android:text="Beli Tiket" />
+</RelativeLayout>
